@@ -10,7 +10,7 @@ take home project --  撈取 [https://data.taipei/](https://data.taipei/)『今�
 官方文檔：[https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)
 ### 啟動docker
 ```Bash
-docker-compose up
+docker-compose up -d
 ```
 ### 前端頁面
 [http://localhost:3000/](http://localhost:3000/)
