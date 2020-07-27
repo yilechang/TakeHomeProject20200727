@@ -1,0 +1,39 @@
+version: '3'
+services:
+  nginx:
+    image: nginx:1.14.2
+    container_name: nginx
+    volumes:
+      - ./th.conf:/etc/nginx/conf.d/th.conf
+    ports:
+      - 3000:3000
+    links:
+      - node
+
+  node:
+    image: node:12.16.3
+    working_dir: /usr/src/app
+    container_name: node
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/usr/src/app
+    command: ${WEB_START_COMMAND}
+
+  mongo1:
+    container_name: mongo1
+    image: mongo
+    ports:
+      - '27017:27017'
+    volumes:
+      - /data/db
+
+  cronjob:
+    container_name: cronjob
+    image: node:12.16.3
+    working_dir: /usr/src/app/cronjob
+    volumes:
+      - .:/usr/src/app
+    command: ${CRON_START_COMMAND}
+    depends_on:
+      - mongo1
