@@ -7,6 +7,7 @@ take home project --  撈取 [https://data.taipei/](https://data.taipei/)『今�
 此專案以docker包next＋react＋node開發
 
 #目錄結構描述
+```
 ├── Readme.md                   
 ├── mongo                       // mongodb
 ├── cronjob                     // nodejs
@@ -20,7 +21,7 @@ take home project --  撈取 [https://data.taipei/](https://data.taipei/)『今�
 ├── package.json
 ├── th.conf
 ├── yarn.lock
-
+```
 
 
 說明
