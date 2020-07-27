@@ -28,8 +28,13 @@ take home project --  撈取 [https://data.taipei/](https://data.taipei/)『今�
 ------
 ### 第一步 安裝docker
 官方文檔：[https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)
-### 第二步 啟動docker
+### 第二步 clone 專案
 ```Bash
+git clone https://github.com/yilechang/TakeHomeProject20200727.git takehomeproject
+```
+### 第三步 進入專案啟動docker
+```Bash
+cd takehomeproject
 docker-compose up -d
 ```
 ### 成果 前端頁面
